@@ -1,4 +1,5 @@
-import SidebarList from "../sidebar/SidebarList";
+import SidebarList from "../../sidebar/SidebarList";
+import "./SidebarStyles.scss"
 
 function Sidebar() {
   return (

@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/layout/Header";
-import Sidebar from "./components/layout/Sidebar";
-import Content from "./components/layout/Content";
+import Header from "./components/layout/header/Header";
+import Sidebar from "./components/layout/sidebarMain/Sidebar";
+import Content from "./components/layout/content/Content";
 
 function App() {
   return (

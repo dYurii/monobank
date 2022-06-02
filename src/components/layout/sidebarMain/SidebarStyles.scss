@@ -1,0 +1,30 @@
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #878686;
+}
+
+.sidebar-container {
+  width: 150px;
+  background-color: #313131;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.sidebar-wrapper {
+  width: 150px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #a3a0a0;
+}
+
+.side-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

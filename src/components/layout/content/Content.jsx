@@ -1,3 +1,6 @@
+import "./ContentStyles.scss"
+
+
 function Content() {
   return (
     <div className="content-wrapper">

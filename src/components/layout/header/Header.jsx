@@ -1,4 +1,5 @@
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import "./HeaderStyles.scss";
 
 function Header() {
   return (
