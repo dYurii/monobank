@@ -1,10 +1,14 @@
 import "./ContentStyles.scss"
-
+import CardItem from "../../cards/CardItem"
 
 function Content() {
   return (
     <div className="content-wrapper">
-      <div className="card">Cards</div>
+      <div className="cards">
+        <CardItem/>
+        <CardItem/>
+        <CardItem/>
+      </div>
       <div className="grap">
         <div className="linear">Linear</div>
         <div className="donut">Donut</div>

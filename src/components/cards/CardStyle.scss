@@ -1,0 +1,38 @@
+.card {
+  &:first-child{
+    margin: 0;
+  }
+  margin-left:20px;
+  font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  vertical-align: middle;
+  width: 250px;
+  height: 100%;
+  text-align: left;
+  padding: 20px;
+  margin-left: 20px;
+  color: #878686;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(59deg, rgba(55,55,55,1) 0%, rgba(44,45,44,1) 100%);
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo{
+    width: 40px;
+    height: 15px;
+    filter: grayscale(100%);
+  }
+  &__number{
+    font-size: 22px;
+    text-align: center;
+  }
+  &__money{
+    color: white;
+    font-size: 20px;
+  }
+}
