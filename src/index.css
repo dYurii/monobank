@@ -17,9 +17,10 @@ div {
 }
 
 .wrapper {
+  height:100vh;
   display: grid;
   grid-template-columns: 150px 1fr;
-  grid-template-rows: 40px 1000px;
+  grid-template-rows: 40px 1fr;
 }
 
 
