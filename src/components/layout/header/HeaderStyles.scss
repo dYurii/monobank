@@ -4,6 +4,9 @@
   align-items: center;
 }
 
+$color-text: #878686;
+$color-bg-header: #313131;
+$header-font-size: 12px;
 
 .header-wrapper {
   min-height: 40px;
@@ -37,19 +40,19 @@
 
 .header-saparate-logo {
   width: 2px;
-  background-color: #878686;
   height: 20px;
+  background-color: $color-text;
 }
 
 .header-logo-web {
-  color: #878686;
+  color: $color-text;
   font-weight: 100;
 }
 
 .header-currency {
   font-size: 12px;
   font-weight: 300;
-  color: #878686;
+  color: $color-text;
   width: 400px;
 }
 
@@ -61,9 +64,7 @@
 .header-currency-list,
 .header-settings-list,
 .header-user {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexible-space-between();
 }
 
 .header-settings {
@@ -72,18 +73,18 @@
 
 .header-settings-list {
   list-style-type: none;
-  font-size: 12px;
-  color: #878686;
+  font-size: $header-font-size;
+  color: $color-text;
 }
 
 .header-settings-item {
-  background-color: #313131;
+  background-color: $color-bg-header;
   padding: 0px 7px;
 }
 
 .header-settings-item a {
   text-decoration: none;
-  color: #878686;
+  color: $color-text;
 }
 
 .header-settings-item:first-child {
@@ -101,13 +102,13 @@
 }
 
 .header-user-grats {
-  color: #878686;
-  font-size: 12px;
+  color: $color-text;
+  font-size: $header-font-size;
 }
 
 .header-search {
   width: 100px;
-  background-color: #313131;
+  background-color: $color-bg-header;
 }
 
 .header-avatar-container img {
@@ -133,7 +134,7 @@
 .header-input {
   border: none;
   border-radius: 25px;
-  background-color: #313131;
+  background-color: $color-bg-header;
   margin-left: -16px;
   width: 50px;
   margin-bottom: 6px;
