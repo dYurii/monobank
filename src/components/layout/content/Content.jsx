@@ -4,12 +4,12 @@ import "./ContentStyles.scss"
 function Content() {
   return (
     <div className="content-wrapper">
-      <div>Cards</div>
-      <div>
-        <div>Linear</div>
-        <div>Donut</div>
+      <div className="card">Cards</div>
+      <div className="grap">
+        <div className="linear">Linear</div>
+        <div className="donut">Donut</div>
       </div>
-      <div>Transaction</div>
+      <div className="transa">Transaction</div>
     </div>
   );
 }

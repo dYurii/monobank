@@ -1,1 +1,35 @@
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 150px 1fr;
+  padding: 20px;
+  gap: 20px;
+}
 
+.card {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.grap {
+  background-color: green;
+  display: flex;
+  flex-direction: column
+}
+
+.linear {
+  height: 50%;
+}
+
+.donut {
+  height: 50%;
+}
+
+.transa {
+  background-color: yellow;
+}
