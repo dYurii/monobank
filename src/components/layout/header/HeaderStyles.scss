@@ -5,7 +5,8 @@
 }
 
 $color-text: #878686;
-$color-bg-header: #313131;
+$color-bg-header: #2c2c2c;
+$color-bg-bt-header: #3f3f3f;
 $header-font-size: 12px;
 
 .header-wrapper {
@@ -15,7 +16,7 @@ $header-font-size: 12px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: $color-bg-header;
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -41,7 +42,7 @@ $header-font-size: 12px;
 .header-saparate-logo {
   width: 2px;
   height: 20px;
-  background-color: $color-text;
+  background-color: #fff;
 }
 
 .header-logo-web {
@@ -51,13 +52,13 @@ $header-font-size: 12px;
 
 .header-currency {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 600;
   color: $color-text;
-  width: 400px;
+  width: 300px;
 }
 
 .header-currency-items {
-  width: 100px;
+  width: 75px;
 }
 
 .header-currency-items,
@@ -67,9 +68,9 @@ $header-font-size: 12px;
   @include flexible-space-between();
 }
 
-.header-settings {
-  width: 320px;
-}
+// .header-settings {
+//   width: 320px;
+// }
 
 .header-settings-list {
   list-style-type: none;
@@ -78,13 +79,14 @@ $header-font-size: 12px;
 }
 
 .header-settings-item {
-  background-color: $color-bg-header;
-  padding: 0px 7px;
+  background-color: $color-bg-bt-header;
+  padding: 5px 10px;
+  margin-left: 1px;
 }
 
 .header-settings-item a {
   text-decoration: none;
-  color: $color-text;
+  color: #fff;
 }
 
 .header-settings-item:first-child {
@@ -104,6 +106,8 @@ $header-font-size: 12px;
 .header-user-grats {
   color: $color-text;
   font-size: $header-font-size;
+  margin-right: 10px;
+
 }
 
 .header-search {
