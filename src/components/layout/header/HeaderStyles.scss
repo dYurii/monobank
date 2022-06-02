@@ -1,3 +1,10 @@
+@mixin flexible-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .header-wrapper {
   min-height: 40px;
   width: 100%;
@@ -11,17 +18,13 @@
 }
 
 .header-main-layout {
+ @include flexible-space-between();
   height: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 98%;
 }
 
 .header-logo-ref {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexible-space-between();
   text-decoration: none;
   width: 120px;
   font-size: 14px;
