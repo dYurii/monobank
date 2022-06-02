@@ -13,6 +13,11 @@
   &:hover {
     background-color: #aba7a7;
   }
+  &:last-child{
+    width:150px;
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 .sidebar-container {
@@ -37,3 +42,5 @@
   justify-content: center;
   align-items: center;
 }
+
+
