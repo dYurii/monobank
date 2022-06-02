@@ -1,11 +1,14 @@
 import SidebarList from "../../sidebar/SidebarList";
-import "./SidebarStyles.scss"
+
+import "./SidebarStyles.scss";
 
 function Sidebar() {
   return (
-    <div className="sidebar-container">
-      <SidebarList />
-    </div>
+    <>
+      <div className="sidebar-container">
+        <SidebarList />
+      </div>
+    </>
   );
 }
 

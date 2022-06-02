@@ -1,26 +1,40 @@
-.sidebar-item {
+@mixin flexible-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.sidebar-item {
+  @include flexible-column();
+  justify-content: center;
   color: #878686;
+  padding-top: 15px;
+  width: 100%;
+  &:hover {
+    background-color: #aba7a7;
+  }
+  &:last-child{
+    width:150px;
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 .sidebar-container {
-  width: 150px;
+  @include flexible-column();
+  justify-content: space-between;
   background-color: #313131;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
 .sidebar-wrapper {
+  @include flexible-column();
   width: 150px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
   justify-content: flex-start;
-  align-items: center;
   color: #a3a0a0;
+  height: 100%;
 }
 
 .side-image {
@@ -28,3 +42,5 @@
   justify-content: center;
   align-items: center;
 }
+
+
