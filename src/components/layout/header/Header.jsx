@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import "./HeaderStyles.scss";
 
@@ -6,11 +7,11 @@ function Header() {
     <div className="header-wrapper">
       <div className="header-main-layout">
         <div className="header-logo-container">
-          <a href="/" className="header-logo-ref">
+          <Link to='/' className="header-logo-ref">
             <div className="header-logo">monobank</div>
             <div className="header-saparate-logo"></div>
             <div className="header-logo-web">Web</div>
-          </a>
+          </Link>
         </div>
         <div className="header-currency">
           <ul className="header-currency-list">
@@ -39,15 +40,15 @@ function Header() {
         </div>
         <div className="header-settings">
           <ul className="header-settings-list">
-            <li className="header-settings-item">
-              <a href="/">MONEY TRANSFER</a>
-            </li>
-            <li className="header-settings-item">
-              <a href="/">CHARGE PHONE</a>
-            </li>
-            <li className="header-settings-item">
-              <a href="/">REPLISH CARD</a>
-            </li>
+            <Link to='/moneytransfer' className="header-settings-item">
+              <span>MONEY TRANSFER</span>
+            </Link>
+            <Link to='/chargephone' className="header-settings-item">
+              <span>CHARGE PHONE</span> 
+            </Link>
+            <Link to='replishcard'className="header-settings-item">
+             <span>REPLISH CARD</span> 
+            </Link>
           </ul>
         </div>
         <div className="header-right-search-avatar">

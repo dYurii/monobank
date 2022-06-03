@@ -13,6 +13,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Dashboard",
+    link: '/'
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Transactions",
+    link: '/transactions'
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Accounts/Cards",
+    link: '/accounts'
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Loans/Deposits",
+    link: '/loans'
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Cashback",
+    link: '/cashback'
   },
   {
     id: 6,
@@ -88,6 +93,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Bank services",
+    link: '/services'
   },
   {
     id: 7,
@@ -103,6 +109,7 @@ const sidebarData = [
       </svg>
     ),
     underLogoText: "Support",
+    link: '/support'
   },
 ];
 

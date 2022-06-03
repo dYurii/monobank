@@ -6,10 +6,12 @@
 
 .sidebar-item {
   @include flexible-column();
+  text-decoration: none;
   justify-content: center;
   color: #878686;
   padding-top: 15px;
   width: 100%;
+  cursor: pointer;
   &:hover {
     background-color: #aba7a7;
   }
@@ -42,5 +44,7 @@
   justify-content: center;
   align-items: center;
 }
+
+
 
 

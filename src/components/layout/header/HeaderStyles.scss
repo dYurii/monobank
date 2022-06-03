@@ -22,7 +22,7 @@ $header-font-size: 12px;
 }
 
 .header-main-layout {
- @include flexible-space-between();
+  @include flexible-space-between();
   height: 40px;
   width: 98%;
 }
@@ -82,21 +82,20 @@ $header-font-size: 12px;
   background-color: $color-bg-bt-header;
   padding: 5px 10px;
   margin-left: 1px;
+  text-decoration: none;
+  &:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  &:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
 }
 
-.header-settings-item a {
+.header-settings-item span {
   text-decoration: none;
   color: #fff;
-}
-
-.header-settings-item:first-child {
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-
-.header-settings-item:last-child {
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
 }
 
 .header-user {
@@ -107,7 +106,6 @@ $header-font-size: 12px;
   color: $color-text;
   font-size: $header-font-size;
   margin-right: 10px;
-
 }
 
 .header-search {
