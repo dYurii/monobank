@@ -40,13 +40,13 @@ function Header() {
         </div>
         <div className="header-settings">
           <ul className="header-settings-list">
-            <Link to='/moneytransfer' className="header-settings-item">
+            <Link to='/403' className="header-settings-item">
               <span>MONEY TRANSFER</span>
             </Link>
-            <Link to='/chargephone' className="header-settings-item">
+            <Link to='/403' className="header-settings-item">
               <span>CHARGE PHONE</span> 
             </Link>
-            <Link to='replishcard'className="header-settings-item">
+            <Link to='/403'className="header-settings-item">
              <span>REPLISH CARD</span> 
             </Link>
           </ul>
