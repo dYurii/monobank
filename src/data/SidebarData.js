@@ -5,7 +5,7 @@ import {
   BsCreditCard2BackFill,
   BsBank2,
   BsFillPiggyBankFill,
-  BsFillFileEarmarkTextFill
+  BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
 
 const sidebarData = [
@@ -19,37 +19,37 @@ const sidebarData = [
     id: 2,
     logo: <BsPieChartFill size="26px" />,
     underLogoText: "Transactions",
-    link: "/403",
+    link: "/transactions",
   },
   {
     id: 3,
     logo: <BsCreditCard2BackFill size="26px" />,
     underLogoText: "Accounts/Cards",
-    link: "/403",
+    link: "/accounts",
   },
   {
     id: 4,
     logo: <BsFillFileEarmarkTextFill size="26px" />,
     underLogoText: "Loans/Deposits",
-    link: "/403",
+    link: "/loans",
   },
   {
     id: 5,
     logo: <BsFillPiggyBankFill size="26px" />,
     underLogoText: "Cashback",
-    link: "/403",
+    link: "/cashback",
   },
   {
     id: 6,
     logo: <BsBank2 size="26px" />,
     underLogoText: "Bank services",
-    link: "/403",
+    link: "/bank",
   },
   {
     id: 7,
     logo: <BsFillTelephoneFill size="26px" />,
     underLogoText: "Support",
-    link: "/403",
+    link: "/support",
   },
 ];
 
