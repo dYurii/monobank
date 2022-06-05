@@ -5,7 +5,10 @@ function LinearGraph({charDate,option}) {
   return (
     <>
     sahrg
+    <div>
       <Line data={charDate} options={option}/>
+    </div>
+      
     </>
   );
 }

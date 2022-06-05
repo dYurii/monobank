@@ -1,13 +1,14 @@
 import "./ContentStyles.scss"
 import CardItem from "../../cards/CardItem"
 import LinearGraph from "../../graphs/LinearGraph";
+import DonutGrap from "../../graphs/DonutGraph"
 import { useState } from "react";
 function Content() {
   const [userData, setUserData] = useState({
-    labels: ['a', 'b', 'c','r','de'],
+    labels: ['пн', 'вт', 'ср','чт','пт','сб', 'нд'],
     datasets: [{
       label: 'Test',
-      data: [1, 33, 3,7,5],
+      data: [20 , 33, 3,7,5,100, 33, 34,7,5],
       backgroundColor: [
         "rgb(117,83,230)"
       ],
@@ -16,12 +17,12 @@ function Content() {
     ]
   });
   const [userOption, setUserOption] = useState({
-    responsive: false,
+    responsive: true,
     plugins: {
       title: {
         display: false,
-        text: 'Chart.js Line Chart - Cubic interpolation mode'
       },
+      legend: false,
     },
     interaction: {
       intersect: false,
@@ -30,18 +31,17 @@ function Content() {
       x: {
         display: true,
         title: {
-          display: true
+          display: false
         },
         position: 'top',
       },
       y: {
         display: true,
         title: {
-          display: true,
+          display: false,
           text: 'Value'
         },
-        suggestedMin: -10,
-        suggestedMax: 200
+        suggestedMin: 0,
       }
     }
   });
@@ -56,7 +56,7 @@ return (
       <div className="linear">
         <LinearGraph charDate={userData} option={userOption} />
       </div>
-      <div className="donut">Donut</div>
+      <div className="donut"><DonutGrap charDate={userData} option={userOption} /></div>
     </div>
     <div className="transa">Transaction</div>
   </div>

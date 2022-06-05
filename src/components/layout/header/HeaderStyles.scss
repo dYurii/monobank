@@ -141,6 +141,14 @@ $header-font-size: 12px;
   width: 50px;
   margin-bottom: 6px;
   outline: none;
+  transition: width 2s;
+  padding-left: 20px;
+  color: #fff;
+  &:focus{
+    width: 150px;
+    background-color: #fff;
+    color: #2c2c2c;
+  }
 }
 
 .header-avatar {
