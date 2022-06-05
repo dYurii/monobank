@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.active {
+.sidebar-item-active {
   @include flexible-column();
   text-decoration: none;
   justify-content: center;

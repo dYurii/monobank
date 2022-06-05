@@ -8,6 +8,7 @@ $color-text: #878686;
 $color-bg-header: #2c2c2c;
 $color-bg-bt-header: #3f3f3f;
 $header-font-size: 12px;
+$header-active-item-bg:#afafaf; 
 
 .header-wrapper {
   min-height: 40px;
@@ -93,9 +94,29 @@ $header-font-size: 12px;
   }
 }
 
+.header-settings-item-active {
+  background-color: $header-active-item-bg;
+  padding: 5px 10px;
+  margin-left: 1px;
+  text-decoration: none;
+  &:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  &:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  & span {
+  text-decoration: none;
+  color: $color-bg-header;
+  }
+}
+
 .header-settings-item span {
   text-decoration: none;
-  color: #afafaf;
+  color: $header-active-item-bg;
 }
 
 .header-user {
