@@ -1,7 +1,7 @@
 .content-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 150px 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 130px 1fr;
   padding: 20px;
   gap: 20px;
 }
@@ -32,4 +32,37 @@
 
 .transa {
   background-color: yellow;
+}
+
+.header-graph-line {
+  display: flex;
+  justify-content: space-between;
+  &>p{
+    font-weight: 700;
+  }
+}
+.header-graph-doughnut{
+  display: flex;
+  justify-content: space-between;
+  &>p{
+    font-weight: 700;
+  }
+}
+.line-day-list {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  &>li {
+    padding-left: 5px;
+
+    &.active {
+      color: red;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
+.content-graph-doughnut{
+  display: grid;
+  grid-template-columns: 50% 50%;
 }

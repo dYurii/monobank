@@ -12,12 +12,14 @@ function Content() {
       backgroundColor: [
         "rgb(117,83,230)"
       ],
-      tension: 0.4
+      tension: 0.4,
+      borderWidth : 4,
     }
     ]
   });
   const [userOption, setUserOption] = useState({
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: false,
@@ -45,6 +47,49 @@ function Content() {
       }
     }
   });
+  const [userDataDounut, setUserDataDounut] = useState({
+    labels: ['пн', 'вт', 'ср','чт','пт','сб', 'нд'],
+    datasets: [{
+      label: 'Test',
+      data: [20 , 33, 3,7,5,20],
+      backgroundColor: [
+        "rgb(117,83,230)","rgb(17,100,230)","rgb(17,8,30)",
+        "rgb(117,8,0)","rgb(0,0,230)","rgb(17,83,20)"
+      ],
+      tension: 0.4
+    }
+    ]
+  });
+  const [userOptionDounut, setUserOptionDounut] = useState({
+    responsive: false,
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: false,
+      },
+      legend: false,
+    },
+    interaction: {
+      intersect: false,
+    },
+    scales: {
+      x: {
+        display: false,
+        title: {
+          display: false
+        },
+        position: 'top',
+      },
+      y: {
+        display: false,
+        title: {
+          display: false,
+          text: 'Value'
+        },
+        suggestedMin: 0,
+      }
+    }
+  });
 return (
   <div className="content-wrapper">
     <div className="cards">
@@ -56,7 +101,8 @@ return (
       <div className="linear">
         <LinearGraph charDate={userData} option={userOption} />
       </div>
-      <div className="donut"><DonutGrap charDate={userData} option={userOption} /></div>
+      <div className="donut">
+        <DonutGrap charDate={userDataDounut} option={userOptionDounut} /></div>
     </div>
     <div className="transa">Transaction</div>
   </div>
