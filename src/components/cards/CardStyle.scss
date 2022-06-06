@@ -3,12 +3,12 @@
     margin: 0;
   }
   margin-left:20px;
-  font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+  font: 16px 'Helvetica Neue', Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   vertical-align: middle;
-  width: 250px;
+  width: 220px;
   height: 100%;
   text-align: left;
   padding: 20px;
@@ -28,11 +28,11 @@
     filter: grayscale(100%);
   }
   &__number{
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
   }
   &__money{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
   }
 }

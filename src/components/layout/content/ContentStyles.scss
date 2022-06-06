@@ -1,12 +1,18 @@
+@mixin content-wrapper {
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .content-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 150px 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 130px 1fr;
   padding: 20px;
   gap: 20px;
 }
 
 .cards {
+  
   display: flex;
   height: 100%;
   width: 100%;
@@ -20,16 +26,53 @@
   display: flex;
   flex-direction: column;
   color: black;
+  justify-content: space-between;
 }
 
-.linear {
-  height: 50%;
+.linear-wrapper {
+  @include content-wrapper();
+  height: 48%;
 }
 
-.donut {
-  height: 50%;
+.donut-wrapper {
+  @include content-wrapper();
+  height: 48%;
 }
 
-.transa {
-  background-color: yellow;
+.transaction-wrapper {
+  @include content-wrapper();
+}
+
+
+.header-graph-line {
+  display: flex;
+  justify-content: space-between;
+  &>p{
+    font-weight: 700;
+  }
+}
+.header-graph-doughnut{
+  display: flex;
+  justify-content: space-between;
+  &>p{
+    font-weight: 700;
+  }
+}
+.line-day-list {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  &>li {
+    padding-left: 5px;
+
+    &.active {
+      color: red;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+}
+.content-graph-doughnut{
+  display: grid;
+  grid-template-columns: 50% 50%;
 }

@@ -1,0 +1,99 @@
+.transaction-block {
+  padding: 10px 10px;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  & ul {
+    display: flex;
+    list-style: none;
+    & li {
+      padding: 0px 2px;
+    }
+  }
+  border-bottom: 1px solid rgb(239, 237, 237);
+}
+
+.currency,
+.category {
+  border: none;
+  opacity: 0.5;
+}
+
+.trans-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.trans-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.date {
+  opacity: 0.6;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.trans-item-wrapper {
+  display: flex;
+}
+
+.trans-money {
+  margin-left: auto;
+}
+
+.trans-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background-color: red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.trans-name {
+  font-weight: bold;
+}
+
+.trans-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trans-categoty-wrapper {
+  font-size: 11px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trans-money {
+  display: flex;
+}
+
+.trans-value {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trans-currency {
+  margin-left: 5px;
+  padding-bottom: 12px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  opacity: 0.8;
+}
