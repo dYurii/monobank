@@ -79,7 +79,7 @@ export const transaction = [
     name: `"Food shop"`,
     card: "** 7813",
     type: "Groceries and Food",
-    value: 300,
+    value: -300,
     current: "UAH",
   },
 ];

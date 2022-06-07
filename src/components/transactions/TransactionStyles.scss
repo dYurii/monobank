@@ -1,3 +1,13 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
 .transaction-block {
   padding: 10px 10px;
 }
@@ -9,8 +19,11 @@
   & ul {
     display: flex;
     list-style: none;
+    margin-right: 15px;
     & li {
       padding: 0px 2px;
+
+      min-width: 130px;
     }
   }
   border-bottom: 1px solid rgb(239, 237, 237);
@@ -23,13 +36,11 @@
 }
 
 .trans-list-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column();
 }
 
 .trans-items-wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column();
   margin-top: 5px;
 }
 
@@ -49,8 +60,7 @@
 }
 
 .trans-logo {
-  display: flex;
-  flex-direction: column;
+  @include flex-column();
   justify-content: center;
   align-items: center;
   border: 1px solid black;
@@ -68,8 +78,7 @@
 
 .trans-info {
   margin-left: 10px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column();
   min-width: 200px;
 }
 
@@ -87,9 +96,8 @@
 .trans-value {
   font-size: 18px;
   font-weight: bold;
-  display: flex;
+  @include flex-align();
   justify-content: center;
-  align-items: center;
 }
 
 .trans-currency {
@@ -98,6 +106,58 @@
   font-size: 10px;
   display: flex;
   justify-content: center;
-  align-items:flex-end;
+  align-items: flex-end;
   opacity: 0.8;
+}
+
+.dropbtn {
+  background: none;
+  opacity: 0.5;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  @include flex-align();
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  &:hover .dropdown-content {
+    display: block;
+  }
+  &:hover .dropbtn {
+    background-color: #3a3a3a;
+    padding: 0px 4px;
+    color: azure;
+    border-radius: 5px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+
+  & button {
+    color: black;
+    padding: 3px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    border: none;
+    background: none;
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  & button:hover {
+    background-color: #3a3a3a;
+    color: azure;
+    opacity: 0.5;
+    border-radius: 5px;
+  }
 }
