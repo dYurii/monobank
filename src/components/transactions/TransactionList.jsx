@@ -19,13 +19,13 @@ function TransactionList() {
           <li>
             <select name="category" className="category">
               <option value="any-categoty">Any category</option>
-              <option value="vehicle">Vehicle and transport</option>
-              <option value="groceries">Groceries and food</option>
-              <option value="clothes">Clothes and shoes</option>
-              <option value="cafe">Cafe and restaurants</option>
-              <option value="mobile">Mobile and internet</option>
-              <option value="house">House and services</option>
-              <option value="other">Other expenses</option>
+              <option value="vehicle">Vehicle and Transport</option>
+              <option value="groceries">Groceries and Food</option>
+              <option value="clothes">Clothes and Shoes</option>
+              <option value="cafe">Cafe and Restaurants</option>
+              <option value="mobile">Mobile and Internet</option>
+              <option value="house">House and Services</option>
+              <option value="other">Other Expenses</option>
             </select>
           </li>
         </ul>
