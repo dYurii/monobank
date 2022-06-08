@@ -1,46 +1,36 @@
-@mixin content-wrapper {
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+@mixin padding {
+  padding:20px;
 }
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 50% 50%;
   grid-template-rows: 130px 1fr;
   padding: 20px;
-  gap: 20px;
 }
 
 .cards {
-  
   display: flex;
   height: 100%;
-  width: 100%;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
-
-.grap {
-  display: flex;
-  flex-direction: column;
-  color: black;
-  justify-content: space-between;
+.money-wrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
 }
-
 .linear-wrapper {
-  @include content-wrapper();
-  height: 48%;
+  @include padding;
 }
 
 .donut-wrapper {
-  @include content-wrapper();
-  height: 48%;
+  @include padding;
 }
 
 .transaction-wrapper {
-  @include content-wrapper();
+  @include padding;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 
@@ -49,6 +39,7 @@
   justify-content: space-between;
   &>p{
     font-weight: 700;
+    letter-spacing: 2px;
   }
 }
 .header-graph-doughnut{
@@ -56,6 +47,7 @@
   justify-content: space-between;
   &>p{
     font-weight: 700;
+    letter-spacing: 2px;
   }
 }
 .line-day-list {
@@ -63,10 +55,10 @@
   list-style: none;
   cursor: pointer;
   &>li {
-    padding-left: 5px;
+    padding-left: 20px;
 
     &.active {
-      color: red;
+      color: #ec8d90;
       text-decoration: underline;
       font-weight: 700;
     }

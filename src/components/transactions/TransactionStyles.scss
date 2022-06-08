@@ -8,14 +8,13 @@
   align-items: center;
 }
 
-.transaction-block {
-  padding: 10px 10px;
-}
 
 .transaction-header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
   & ul {
     display: flex;
     list-style: none;
