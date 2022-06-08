@@ -54,7 +54,7 @@ function TransactionList() {
       </div>
       <div className="trans-list-wrapper">
         {transaction.map((item) => (
-          <TransactionItem key={item.id} transItem={item} />
+          <TransactionItem key={item.id} transItem={item} bgLogo={item.color} />
         ))}
       </div>
     </div>

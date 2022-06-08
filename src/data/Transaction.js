@@ -13,6 +13,7 @@ export const transaction = [
     type: "Mobile and Internet",
     value: -225,
     current: "UAH",
+    color: "blue"
   },
 
   {
@@ -23,6 +24,7 @@ export const transaction = [
     type: "Vehicle and Transport",
     value: -52,
     current: "UAH",
+    color: "red"
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const transaction = [
     type: "House and Services",
     value: -200,
     current: "USD",
+    color: "yellow"
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const transaction = [
     type: "Cafe and Restaurant",
     value: -80,
     current: "USD",
+    color: "pink"
   },
 
   {
@@ -52,6 +56,7 @@ export const transaction = [
     type: "Clothes and Shoes",
     value: -250,
     current: "USD",
+    color: "orange"
   },
   {
     id: 6,
@@ -61,6 +66,7 @@ export const transaction = [
     type: "Transaction",
     value: 300000,
     current: "USD",
+    color: "green"
   },
 
   {
@@ -72,6 +78,7 @@ export const transaction = [
     type: "Cafe and Restaurant",
     value: -500,
     current: "UAH",
+    color: "pink"
   },
   {
     id: 7,
@@ -81,5 +88,6 @@ export const transaction = [
     type: "Groceries and Food",
     value: -300,
     current: "UAH",
+    color: "brown"
   },
 ];

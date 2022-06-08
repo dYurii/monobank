@@ -1,11 +1,11 @@
 import "./TransactionStyles.scss";
 
-function TransactionItem({transItem}) {
+function TransactionItem({transItem, bgLogo}) {
   return (
     <div className="trans-items-wrapper">
       <div className="date">{transItem.date}</div>
       <div className="trans-item-wrapper">
-        <div className="trans-logo">{transItem.logo}</div>
+        <div className="trans-logo" style={{backgroundColor:bgLogo}}>{transItem.logo}</div>
         <div className="trans-info">
           <div className="trans-name">{transItem.name}</div>
           <div className="trans-categoty-wrapper">
