@@ -5,11 +5,6 @@ import DonutGrap from "../../graphs/DonutGraph";
 import { useState } from "react";
 import TransactionList from "../../transactions/TransactionList";
 function Content() {
-  const changeColor = () => {
-    setUserData(previousState => {
-      return { ...previousState, date: 0 }
-    })
-  };
   const [userData, setUserData] = useState({
     labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
     datasets: [{
@@ -18,6 +13,7 @@ function Content() {
       backgroundColor: [
         "rgb(117,83,230)"
       ],
+      borderColor: "rgb(22,83,210)",
       tension: 0.4,
       borderWidth: 4,
     }
@@ -25,7 +21,7 @@ function Content() {
   });
   const [userOption, setUserOption] = useState({
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     plugins: {
       title: {
         display: false,
@@ -41,6 +37,9 @@ function Content() {
         title: {
           display: false,
         },
+        grid: {
+          drawBorder: false,
+        },
         position: "top",
       },
       y: {
@@ -48,6 +47,9 @@ function Content() {
         title: {
           display: false,
           text: "Value",
+        },
+        grid: {
+          drawBorder: false,
         },
         suggestedMin: 0,
       },
@@ -66,7 +68,6 @@ function Content() {
     ]
   });
 
-  const [color, setColor] = useState("red");
   const [userOptionDounut, setUserOptionDounut] = useState({
     responsive: true,
     maintainAspectRatio: true,
@@ -75,6 +76,7 @@ function Content() {
         display: false,
       },
       legend: false,
+      tooltip: false,
     },
     interaction: {
       intersect: false,
@@ -106,7 +108,7 @@ function Content() {
       </div>
       <div className="money-wrapper">
         <div className="linear-wrapper">
-          <LinearGraph charDate={userData} option={userOption} />
+          <LinearGraph {...userData} charDate={userData} option={userOption} />
         </div>
         <div className="donut-wrapper">
           <DonutGrap charDate={userDataDounut} option={userOptionDounut} />
@@ -115,7 +117,6 @@ function Content() {
           <TransactionList />
         </div>
       </div>
-      <button onClick={changeColor}>{color}</button>
     </div>
   );
 }
