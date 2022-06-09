@@ -33,6 +33,7 @@ function TransactionList() {
                 <button onClick={handleClick}>USD</button>
                 <button onClick={handleClick}>EUR</button>
                 <button onClick={handleClick}>BITCOIN</button>
+                <button onClick={handleClick}>UAH</button>
               </div>
             </div>
           </li>
@@ -53,7 +54,7 @@ function TransactionList() {
         </ul>
       </div>
       <div className="trans-list-wrapper">
-        {transaction.map((item) => (
+        {transaction.filter((item) => (item.type === categ && item.current === curr)).map((item)=>(
           <TransactionItem key={item.id} transItem={item} bgLogo={item.color} />
         ))}
       </div>

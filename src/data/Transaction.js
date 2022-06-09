@@ -55,7 +55,7 @@ export const transaction = [
     card: "** 7813",
     type: "Clothes and Shoes",
     value: -250,
-    current: "USD",
+    current: "EUR",
     color: "orange"
   },
   {
