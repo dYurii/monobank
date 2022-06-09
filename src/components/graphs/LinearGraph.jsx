@@ -4,66 +4,85 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto"
 function LinearGraph({ charDate, option }) {
   const [userData, setUserDate] = useState(charDate);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [isActive1, setIsActive1] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
   let changeClass = () => {
-    setIsActive(current => !current);
+    setIsActive(true);
+    setIsActive1(false);
+    setIsActive2(false);
+    setIsActive3(false);
   }
+  let changeClass1 = () => {
+    setIsActive(false);
+    setIsActive1(true);
+    setIsActive2(false);
+    setIsActive3(false);
+  }
+  let changeClass2 = () => {
+    setIsActive(false);
+    setIsActive1(false);
+    setIsActive2(true);
+    setIsActive3(false);
+  }
+  let changeClass3 = () => {
+    setIsActive(false);
+    setIsActive1(false);
+    setIsActive2(false);
+    setIsActive3(true);
+  }
+  const dayWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const dateCosts = [20, 33, 3, 7, 5, 50, 33, 34, 7, 5];
+  const dateSets = {
+    backgroundColor: "red",
+    borderColor: "red",
+    tension: 0.4,
+    borderWidth: 4,
+  };
   const setGraphWeek = () => {
     setUserDate({
-      ...userData, labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
+      ...userData,
+      labels: dayWeek,
       datasets: [{
-        label: 'Test',
-        data: [20, 33, 3, 7, 5, 100, 33, 34, 7, 5],
-        backgroundColor: [
-          "red"
-        ],
-        borderColor: "red",
-        tension: 0.4,
-        borderWidth: 4,
+        data: dateCosts,
+        ...dateSets
       }],
     });
     changeClass()
   };
   const setGraphMounth = () => {
     setUserDate({
-      ...userData, labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
+      ...userData,
+      labels: [...dayWeek, ...dayWeek, ...dayWeek, ...dayWeek],
       datasets: [{
-        data: [5, 4, 1, 3, 4, 5, 6, 7, 4, 3, 5, 4, 1, 3, 4, 5, 6, 7, 4, 3, 5, 4, 1, 3, 4, 5, 6, 7, 4, 3], 
-        backgroundColor: [
-          "blue"
-        ],
-        borderColor: "blue",
-        tension: 0.4,
-        borderWidth: 4,
+        data: [...dateCosts, ...dateCosts, ...dateCosts],
+        ...dateSets
       }],
     });
-    changeClass()
+    changeClass1()
   };
   const setGraphYear = () => {
     setUserDate({
-      ...userData,labels: ['січень','лютий','березень','квітень','травень','червень','липень','серпень','вересень','жовтень','листопад','грудень'],
-      datasets: [{ data: [50, 40, 10, 30, 40, 50, 60, 70, 40, 30,80,20] }],
-      backgroundColor: [
-        "red"
-      ],
-      borderColor: "red",
-      tension: 0.4,
-      borderWidth: 4,
+      ...userData,
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [{
+        data: [...dateCosts, 4, 9],
+        ...dateSets
+      }],
     });
-    changeClass()
+    changeClass2()
   };
   const setGraphOther = () => {
     setUserDate({
-      ...userData,labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
-      datasets: [{ data: [5, 4, 1, 3, 4, 5, 6, 7, 4, 3] }],
-      backgroundColor: [
-        "rgb(0,0,0)"
-      ],
-      borderColor: "rgb(0,0,0)",
-      tension: 0.4,
-      borderWidth: 4,
+      ...userData,
+      labels: dayWeek,
+      datasets: [{
+        data: dateCosts,
+        ...dateSets
+      }],
     });
-    changeClass()
+    changeClass3()
   };
   return (
     <>
@@ -71,16 +90,16 @@ function LinearGraph({ charDate, option }) {
         <p>Balance summary</p>
         <ul className="line-day-list">
           <li className={isActive ? 'active' : ''} onClick={setGraphWeek}>Week</li>
-          <li className={isActive ? 'active' : ''} onClick={setGraphMounth}>Mounth</li>
-          <li className={isActive ? 'active' : ''} onClick={setGraphYear}>Year</li>
-          <li className={isActive ? 'active' : ''} onClick={setGraphOther}>Other</li>
+          <li className={isActive1 ? 'active' : ''} onClick={setGraphMounth}>Mounth</li>
+          <li className={isActive2 ? 'active' : ''} onClick={setGraphYear}>Year</li>
+          <li className={isActive3 ? 'active' : ''} onClick={setGraphOther}>Other</li>
         </ul>
       </div>
-      <div>
+      <div className="graph-wrapper">
         <Line data={userData} options={option} />
       </div>
       <div>
-        <p className="totalbalans">Total balans: <span>20444</span> USD</p>
+        <p className="totalbalans">Total balans: <span>20 444</span> USD</p>
       </div>
     </>
   );

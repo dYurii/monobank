@@ -6,7 +6,7 @@ import { useState } from "react";
 import TransactionList from "../../transactions/TransactionList";
 function Content() {
   const [userData, setUserData] = useState({
-    labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [{
       label: 'Test',
       data: [20, 33, 3, 7, 5, 100, 33, 34, 7, 5],
@@ -21,7 +21,7 @@ function Content() {
   });
   const [userOption, setUserOption] = useState({
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: false,
@@ -56,14 +56,12 @@ function Content() {
     },
   });
   const [userDataDounut, setUserDataDounut] = useState({
-    labels: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'нд'],
     datasets: [{
-      label: 'Test',
       data: [20, 33, 3, 7, 5, 20],
       backgroundColor: [
-        "rgb(117,83,230)", "rgb(17,100,230)", "rgb(17,8,30)",
-        "rgb(117,8,0)", "rgb(0,0,230)", "rgb(17,83,20)"
+        "blue", "yellow", "red","pink", "orange", "green",
       ],
+      borderWidth:0,
     }
     ]
   });
@@ -71,6 +69,7 @@ function Content() {
   const [userOptionDounut, setUserOptionDounut] = useState({
     responsive: true,
     maintainAspectRatio: true,
+    cutout: 120,
     plugins: {
       title: {
         display: false,
