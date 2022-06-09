@@ -81,7 +81,7 @@ function Header() {
           <div className="header-user-grats">
             <p>Hello, {user.userName}</p>
           </div>
-          <label className="search-logo" for="search">
+          <label className="search-logo" htmlFor="search">
             <svg
               fill="#878686"
               xmlns="http://www.w3.org/2000/svg"
