@@ -6,7 +6,7 @@ import { FaWifi, FaGasPump } from "react-icons/fa";
 export const transaction = [
   {
     id: 1,
-    date: "30 December",
+    date: "30 December 2:03 PM",
     logo: <FaWifi />,
     name: `Phone "Vodafone" +3999999999`,
     card: "** 7813",
@@ -19,6 +19,7 @@ export const transaction = [
   {
     id: 2,
     logo: <FaGasPump />,
+    date: "30 December 5:47 PM",
     name: `"Shell" gas station`,
     card: "** 7813",
     type: "Vehicle and Transport",
@@ -28,6 +29,7 @@ export const transaction = [
   },
   {
     id: 3,
+    date: "30 December 9:01 PM",
     logo: <GiHouse />,
     name: `"General electic" housing services`,
     card: "** 7813",
@@ -38,7 +40,7 @@ export const transaction = [
   },
   {
     id: 4,
-    date: "29 December",
+    date: "29 December 11:12 AM",
     logo: <IoMdPizza />,
     name: `"Food and Drinks" restaurant`,
     card: "** 7813",
@@ -50,6 +52,7 @@ export const transaction = [
 
   {
     id: 5,
+    date: "29 December 4:20 PM",
     logo: <BsFillBagFill />,
     name: `"Zara Man" store`,
     card: "** 7813",
@@ -60,18 +63,7 @@ export const transaction = [
   },
   {
     id: 6,
-    logo: <GiReceiveMoney />,
-    name: `Transfer from Andrii`,
-    card: "** 7813",
-    type: "Transaction",
-    value: 300000,
-    current: "USD",
-    color: "green"
-  },
-
-  {
-    id: 4,
-    date: "28 December",
+    date: "28 December 8:02 PM",
     logo: <IoMdPizza />,
     name: `"Sushi King" restaurant`,
     card: "** 7813",
@@ -81,6 +73,7 @@ export const transaction = [
     color: "pink"
   },
   {
+    date: "28 December 8:45 PM",
     id: 7,
     logo: <BsFillBasket3Fill />,
     name: `"Food shop"`,
@@ -91,3 +84,7 @@ export const transaction = [
     color: "brown"
   },
 ];
+
+export const datee = [
+  '28 December','29 December', '30 December'
+]

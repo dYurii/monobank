@@ -1,24 +1,22 @@
 import "./TransactionStyles.scss";
 import TransactionItem from "./TransactionItem";
-import { transaction } from "../../data/Transaction";
-import { BsChevronDown} from "react-icons/bs";
-import {useState} from 'react'
-
+import { transaction, datee } from "../../data/Transaction";
+import { BsChevronDown } from "react-icons/bs";
+import { useState } from "react";
 
 function TransactionList() {
-
-  const [curr, setCurr] = useState('Any currency')
-  const [categ, setCateg] = useState('Any categories')
+  const [curr, setCurr] = useState("Any currency");
+  const [categ, setCateg] = useState("Any categories");
 
   const handleClickCat = (e) => {
-    e.preventDefault()
-     setCateg(e.currentTarget.innerText) 
-    }
+    e.preventDefault();
+    setCateg(e.currentTarget.innerText);
+  };
 
   const handleClick = (e) => {
-  e.preventDefault()
-   setCurr(e.currentTarget.innerText) 
-  }
+    e.preventDefault();
+    setCurr(e.currentTarget.innerText);
+  };
 
   return (
     <div className="transaction-block">
@@ -27,7 +25,10 @@ function TransactionList() {
         <ul>
           <li>
             <div className="dropdown">
-              <button className="dropbtn">{curr}<BsChevronDown/></button>
+              <button className="dropbtn">
+                {curr}
+                <BsChevronDown />
+              </button>
               <div className="dropdown-content">
                 <button onClick={handleClick}>Any currency</button>
                 <button onClick={handleClick}>USD</button>
@@ -38,10 +39,13 @@ function TransactionList() {
             </div>
           </li>
           <li>
-          <div className="dropdown">
-              <button className="dropbtn">{categ}<BsChevronDown/></button>
+            <div className="dropdown">
+              <button className="dropbtn">
+                {categ}
+                <BsChevronDown />
+              </button>
               <div className="dropdown-content">
-                <button onClick={handleClickCat}>Any currency</button>
+                <button onClick={handleClickCat}>Any categories</button>
                 <button onClick={handleClickCat}>Mobile and Internet</button>
                 <button onClick={handleClickCat}>Vehicle and Transport</button>
                 <button onClick={handleClickCat}>Clothes and Shoes</button>
@@ -54,9 +58,43 @@ function TransactionList() {
         </ul>
       </div>
       <div className="trans-list-wrapper">
-        {transaction.filter((item) => (item.type === categ && item.current === curr)).map((item)=>(
-          <TransactionItem key={item.id} transItem={item} bgLogo={item.color} />
-        ))}
+        {categ === "Any categories" && curr === "Any currency"
+          ? transaction.map((item) => (
+              <TransactionItem
+                key={item.id}
+                transItem={item}
+                bgLogo={item.color}
+              />
+            ))
+          : categ === "Any categories" && curr !== "Any currency"
+          ? transaction
+              .filter((item) => item.current === curr)
+              .map((item) => (
+                <TransactionItem
+                  key={item.id}
+                  transItem={item}
+                  bgLogo={item.color}
+                />
+              ))
+          : categ !== "Any categories" && curr === "Any currency"
+          ? transaction
+              .filter((item) => item.type === categ)
+              .map((item) => (
+                <TransactionItem
+                  key={item.id}
+                  transItem={item}
+                  bgLogo={item.color}
+                />
+              ))
+          : transaction
+              .filter((item) => item.type === categ && item.current === curr)
+              .map((item) => (
+                <TransactionItem
+                  key={item.id}
+                  transItem={item}
+                  bgLogo={item.color}
+                />
+              ))}
       </div>
     </div>
   );
