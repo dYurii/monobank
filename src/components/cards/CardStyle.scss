@@ -1,11 +1,14 @@
 .card {
-  &:first-child{
+  &:first-child {
     margin: 0;
   }
-  -webkit-box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.48); 
-box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.48);
+
+  -webkit-box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.48);
   margin-left:20px;
-  font: 16px 'Helvetica Neue', Helvetica, sans-serif;
+  font: 16px 'Helvetica Neue',
+  Helvetica,
+  sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,22 +21,26 @@ box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.48);
   color: #878686;
   border-radius: 20px;
   box-sizing: border-box;
-  background: linear-gradient(59deg, rgba(55,55,55,1) 0%, rgba(44,45,44,1) 100%);
-  &__footer{
+  background: linear-gradient(59deg, rgba(55, 55, 55, 1) 0%, rgba(44, 45, 44, 1) 100%);
+
+  &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__logo{
+
+  &__logo {
     width: 40px;
     height: 15px;
     filter: grayscale(100%);
   }
-  &__number{
+
+  &__number {
     font-size: 18px;
     text-align: center;
   }
-  &__money{
+
+  &__money {
     color: white;
     font-size: 16px;
   }

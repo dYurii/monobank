@@ -57,11 +57,11 @@ function Content() {
   });
   const [userDataDounut, setUserDataDounut] = useState({
     datasets: [{
-      data: [20, 33, 3, 7, 5, 20],
+      data: [20, 20, 10, 10, 20, 20],
       backgroundColor: [
-        "blue", "yellow", "red","pink", "orange", "green",
+        "blue", "yellow", "orange", "pink", "black", "red",
       ],
-      borderWidth:0,
+      borderWidth: 0,
     }
     ]
   });

@@ -35,8 +35,8 @@ function LinearGraph({ charDate, option }) {
   const dayWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   const dateCosts = [20, 33, 3, 7, 5, 50, 33, 34, 7, 5];
   const dateSets = {
-    backgroundColor: "red",
-    borderColor: "red",
+    backgroundColor: "blue",
+    borderColor: "blue",
     tension: 0.4,
     borderWidth: 4,
   };
