@@ -101,9 +101,17 @@ function Content() {
   return (
     <div className="content-wrapper">
       <div className="cards">
-        <CardItem />
-        <CardItem />
-        <CardItem />
+        <div className="cards-wrapper">
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+        </div>
       </div>
       <div className="money-wrapper">
         <div className="linear-wrapper">
