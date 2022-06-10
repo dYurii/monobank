@@ -2,6 +2,7 @@
   &:first-child {
     margin: 0;
   }
+
   -webkit-box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.48);
   font: 16px 'Helvetica Neue',
@@ -20,6 +21,7 @@
   box-sizing: border-box;
   background: linear-gradient(59deg, rgba(55, 55, 55, 1) 0%, rgba(44, 45, 44, 1) 100%);
   margin-bottom: 10px;
+
   &__footer {
     display: flex;
     justify-content: space-between;

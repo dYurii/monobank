@@ -11,7 +11,7 @@ function DonutGraph({ charDate, option }) {
   const [isActive1, setIsActive1] = useState(false);
   const [isActive2, setIsActive2] = useState(false);
   const [isActive3, setIsActive3] = useState(false);
-  const [donutMoney, setDonutMoney] = useState (5000)
+  const [donutMoney, setDonutMoney] = useState(5000)
   let changeClass = () => {
     setIsActive(true);
     setIsActive1(false);
@@ -43,8 +43,7 @@ function DonutGraph({ charDate, option }) {
   const dateCosts = [20, 33, 3, 7, 5, 50];
   const dateSets = {
     backgroundColor: [
-      "blue", "yellow", "orange",
-      "pink", "brown",  "red",
+      "blue", "yellow", "orange", "pink", "black", "red",
     ],
     borderWidth: 0,
   };

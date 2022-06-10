@@ -4,6 +4,8 @@ import LinearGraph from "../../graphs/LinearGraph";
 import DonutGrap from "../../graphs/DonutGraph";
 import { useState } from "react";
 import TransactionList from "../../transactions/TransactionList";
+import CardList from "../../cards/CardList";
+
 function Content() {
   const [userData, setUserData] = useState({
     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -102,15 +104,7 @@ function Content() {
     <div className="content-wrapper">
       <div className="cards">
         <div className="cards-wrapper">
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
+          <CardList />
         </div>
       </div>
       <div className="money-wrapper">
