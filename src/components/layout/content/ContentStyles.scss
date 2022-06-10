@@ -2,10 +2,19 @@
   padding: 20px;
 }
 
+@mixin shadow-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+
 .content-wrapper {
   display: grid;
   grid-template-rows: 130px 1fr;
+// HEAD
   @include padding;
+  padding: 20px;
+  gap: 10px;
+// 0d0364cf39742cf9f71761eff5a9070b4adb656a
 }
 
 .cards {
@@ -14,19 +23,23 @@
 }
 
 .money-wrapper {
+  gap: 10px;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
 .linear-wrapper {
+  @include shadow-card();
   @include padding;
 }
 
 .donut-wrapper {
+  @include shadow-card();
   @include padding;
 }
 
 .transaction-wrapper {
+  @include shadow-card();
   @include padding;
   grid-column-start: 2;
   grid-column-end: 3;

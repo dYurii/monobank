@@ -11,35 +11,40 @@ function DonutGraph({ charDate, option }) {
   const [isActive1, setIsActive1] = useState(false);
   const [isActive2, setIsActive2] = useState(false);
   const [isActive3, setIsActive3] = useState(false);
+  const [donutMoney, setDonutMoney] = useState (5000)
   let changeClass = () => {
     setIsActive(true);
     setIsActive1(false);
     setIsActive2(false);
     setIsActive3(false);
+    setDonutMoney(5000)
   }
   let changeClass1 = () => {
     setIsActive(false);
     setIsActive1(true);
     setIsActive2(false);
     setIsActive3(false);
+    setDonutMoney(20000)
   }
   let changeClass2 = () => {
     setIsActive(false);
     setIsActive1(false);
     setIsActive2(true);
     setIsActive3(false);
+    setDonutMoney(240000)
   }
   let changeClass3 = () => {
     setIsActive(false);
     setIsActive1(false);
     setIsActive2(false);
     setIsActive3(true);
+    setDonutMoney(540000)
   }
   const dateCosts = [20, 33, 3, 7, 5, 50];
   const dateSets = {
     backgroundColor: [
       "blue", "yellow", "orange",
-      "pink", "black",  "red",
+      "pink", "brown",  "red",
     ],
     borderWidth: 0,
   };
@@ -103,7 +108,7 @@ function DonutGraph({ charDate, option }) {
         </ul>
         <div className="grap-wrapper-dounut ">
           <div className="textInDounut">
-            <span>-5 000</span> USD
+            <span>{donutMoney}</span> USD
           </div>
           <Doughnut data={userData1} options={option} />
         </div>
