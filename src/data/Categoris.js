@@ -10,32 +10,32 @@ const transaction = [
     id: 2,
     procent:'',
     type: "Vehicle and Transport",
-    color: "yellow"
+    color: "red"
   },
   {
     id: 3,
     procent:'',
     type: "House and Services",
-    color: "orange"
+    color: "yellow"
   },
 
   {
     id: 4,
     procent:'',
     type: "Clothes and Shoes",
-    color: "pink"
+    color: "orange"
   },
   {
     id: 5,
     procent:'',
     type: "Cafe and Restaurant",
-    color: "black"
+    color: "pink"
   },
   {
     id: 6,
     procent:'',
     type: "Groceries and Food",
-    color: "red"
+    color: "brown"
   },
 ];
 
