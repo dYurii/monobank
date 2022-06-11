@@ -1,0 +1,55 @@
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn-donut {
+  background: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  @include flex-align();
+}
+
+.dropdown-donut {
+  position: relative;
+  display: inline-block;
+  &:hover .dropdown-donut-content {
+    display: block;
+  }
+  &:hover .dropbtn-donut {
+    background-color: #3a3a3a;
+    padding: 0px 4px;
+    color: azure;
+    border-radius: 5px;
+  }
+}
+
+.dropdown-donut-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+
+  & button {
+    color: black;
+    padding: 3px 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border: none;
+    background: none;
+    width: 100%;
+  }
+
+  & button:hover {
+    background-color: #3a3a3a;
+    color: azure;
+
+    border-radius: 5px;
+  }
+}

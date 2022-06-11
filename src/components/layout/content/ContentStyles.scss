@@ -6,15 +6,15 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 7px 8px 3px;
   border-radius: 10px;
 }
+$active-date-btn-color: #ec8d90;
+$balance-font-weight: 700;
 
 .content-wrapper {
   display: grid;
   grid-template-rows: 160px 1fr;
-  // HEAD
   @include padding;
   padding: 20px;
   gap: 10px;
-  // 0d0364cf39742cf9f71761eff5a9070b4adb656a
 }
 
 .cards {
@@ -58,13 +58,12 @@
   grid-row-end: 3;
 }
 
-
 .header-graph-line {
   display: flex;
   justify-content: space-between;
 
-  &>p {
-    font-weight: 700;
+  & > p {
+    font-weight: $balance-font-weight;
     letter-spacing: 2px;
   }
 }
@@ -73,8 +72,8 @@
   display: flex;
   justify-content: space-between;
 
-  &>p {
-    font-weight: 700;
+  & > p {
+    font-weight: $balance-font-weight;
     letter-spacing: 2px;
   }
 }
@@ -84,13 +83,13 @@
   list-style: none;
   cursor: pointer;
 
-  &>li {
+  & > li {
     padding-left: 20px;
 
     &.active {
-      color: #ec8d90;
+      color: $active-date-btn-color;
       text-decoration: underline;
-      font-weight: 700;
+      font-weight: $balance-font-weight;
     }
   }
 }
@@ -100,19 +99,19 @@
   grid-template-columns: 50% 50%;
   padding: 20px 0;
 
-  &>ul>li {
+  & > ul > li {
     display: flex;
     list-style: none;
     align-items: center;
 
-    &>.desh {
+    & > .desh {
       height: 15px;
       width: 15px;
-      background-color: #ec8d90;
+      background-color: $active-date-btn-color;
       border-radius: 50px;
     }
 
-    &>.content-procent {
+    & > .content-procent {
       padding: 15px;
     }
   }
@@ -121,9 +120,9 @@
 .totalbalans {
   float: right;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 600;
 
-  &>span {
+  & > span {
     font-size: 25px;
     letter-spacing: 0px;
   }
@@ -142,8 +141,9 @@
 .textInDounut {
   position: absolute;
   font-size: 20px;
+  font-weight: $balance-font-weight;
 
-  &>span {
+  & > span {
     font-size: 40px;
   }
 }

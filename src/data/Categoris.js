@@ -1,43 +1,48 @@
 const transaction = [
   {
     id: 1,
-    procent:'',
+    procent: "",
     type: "Mobile and Internet",
-    color: "blue"
+    color: "blue",
   },
 
   {
     id: 2,
-    procent:'',
+    procent: "",
     type: "Vehicle and Transport",
-    color: "yellow"
+    color: "red",
   },
   {
     id: 3,
-    procent:'',
+    procent: "",
     type: "House and Services",
-    color: "orange"
+    color: "yellow",
   },
 
   {
     id: 4,
-    procent:'',
+    procent: "",
     type: "Clothes and Shoes",
-    color: "pink"
+    color: "orange",
   },
   {
     id: 5,
-    procent:'',
+    procent: "",
     type: "Cafe and Restaurant",
-    color: "black"
+    color: "pink",
   },
   {
     id: 6,
-    procent:'',
+    procent: "",
     type: "Groceries and Food",
-    color: "red"
+    color: "brown",
+  },
+  {
+    id: 7,
+    procent: "",
+    type: "Other",
+    color: "green",
   },
 ];
 
 export default transaction;
-

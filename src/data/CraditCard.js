@@ -1,41 +1,40 @@
 const cardData = [
   {
     id: 1,
-    balance: "15 000 uah",
-    numberCart: "4444 1145 7845 9875",
-    finishDate: "02/23"
+    balance: "15 000 UAH",
+    numberCart: "4444 1145 7832 9428",
+    finishDate: "02/23",
   },
   {
     id: 2,
-    balance: "13 324 uah",
-    numberCart: "4444 1145 7845 9875",
-    finishDate: "01/33"
+    balance: "13 324 UAH",
+    numberCart: "4444 6645 3455 4124",
+    finishDate: "01/26",
   },
   {
     id: 3,
-    balance: "1 233 uah",
-    numberCart: "2148 1145 4574 9875",
-    finishDate: "01/22"
+    balance: "12 233 UAH",
+    numberCart: "2148 3445 4574 9813",
+    finishDate: "01/27",
   },
   {
     id: 4,
-    balance: "3 414 uah",
-    numberCart: "3332 1145 4574 1231",
-    finishDate: "09/22"
+    balance: "6 400 EUR",
+    numberCart: "3332 1345 7574 1231",
+    finishDate: "09/24",
   },
   {
     id: 5,
-    balance: "12 233 uah",
-    numberCart: "4141 1145 4574 9875",
-    finishDate: "12/22"
+    balance: "5 233 USD",
+    numberCart: "4141 1353 4574 9414",
+    finishDate: "12/26",
   },
   {
     id: 6,
-    balance: "21 432 uah",
-    numberCart: "4325 3434 4574 9875",
-    finishDate: "02/22"
+    balance: "16 432 USD",
+    numberCart: "4325 3434 4574 3923",
+    finishDate: "02/27",
   },
-
 ];
 
 export default cardData;
