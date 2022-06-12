@@ -5,8 +5,10 @@ import DonutGrap from "../../graphs/DonutGraph";
 import { useState } from "react";
 import TransactionList from "../../transactions/TransactionList";
 import CardList from "../../cards/CardList";
+import dateCategoris from '../../../data/Categoris'
 
 function Content() {
+  const colorDiagram = dateCategoris.map(item=>(item.color))
   const [userData, setUserData] = useState({
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [
@@ -60,15 +62,7 @@ function Content() {
     datasets: [
       {
         data: [23, 17, 12, 8, 25, 15, 10],
-        backgroundColor: [
-          "blue",
-          "red",
-          "yellow",
-          "orange",
-          "pink",
-          "brown",
-          "green",
-        ],
+        backgroundColor:colorDiagram,
         borderWidth: 0,
       },
     ],
@@ -118,7 +112,7 @@ function Content() {
           <LinearGraph {...userData} charDate={userData} option={userOption} />
         </div>
         <div className="donut-wrapper">
-          <DonutGrap charDate={userDataDounut} option={userOptionDounut} />
+          <DonutGrap charDate={userDataDounut} option={userOptionDounut} colorDounut={colorDiagram} />
         </div>
         <div className="transaction-wrapper">
           <TransactionList />

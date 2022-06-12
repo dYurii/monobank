@@ -4,12 +4,13 @@ import { useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import dateCategoris from "../../data/Categoris";
 import "./DonutGraphStyles.scss";
-function DonutGraph({ charDate, option }) {
+function DonutGraph({ charDate, option,colorDounut}) {
   const [userData1, setUserDate] = useState(charDate);
   const sum = userData1.datasets[0].data.reduce(
     (partialSum, a) => partialSum + a,
     0
-  );
+  );  
+  console.log(colorDounut)
   const prosent = userData1.datasets[0].data.map((item) => (item * 100) / sum);
   const prosent1 = prosent.map((item) => item.toFixed(0));
   const [isActive, setIsActive] = useState(true);
@@ -69,15 +70,7 @@ function DonutGraph({ charDate, option }) {
   };
   const dateCosts = [20, 33, 3, 7, 5, 50];
   const dateSets = {
-    backgroundColor: [
-      "blue",
-      "red",
-      "yellow",
-      "orange",
-      "pink",
-      "brown",
-      "green",
-    ],
+    backgroundColor: colorDounut,
     borderWidth: 0,
   };
   const setGraphWeek = () => {
