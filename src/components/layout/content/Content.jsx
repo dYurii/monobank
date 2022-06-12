@@ -5,10 +5,10 @@ import DonutGrap from "../../graphs/DonutGraph";
 import { useState } from "react";
 import TransactionList from "../../transactions/TransactionList";
 import CardList from "../../cards/CardList";
-import dateCategoris from '../../../data/Categoris'
+import date from '../../../data/date.json'
 
 function Content() {
-  const colorDiagram = dateCategoris.map(item=>(item.color))
+  const colorDiagram = date.categoris.map(item=>(item.color));
   const [userData, setUserData] = useState({
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [

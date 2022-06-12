@@ -1,9 +1,10 @@
-import CraditCard from "../../data/CraditCard"
+import date from "../../data/date.json"
 import CardItem from "./CardItem";
 function CardList() {
+
   return (
     <>
-      {CraditCard.map((item) => (<CardItem key={item.id} cardDate={item} />))}
+      {date.cardData.map((item) => (<CardItem key={item.id} cardDate={item} />))}
     </>
   );
 }

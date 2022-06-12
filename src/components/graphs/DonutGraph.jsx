@@ -2,7 +2,7 @@ import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { useState } from "react";
 import { Doughnut } from "react-chartjs-2";
-import dateCategoris from "../../data/Categoris";
+import dateCategoris from "../../data/date";
 import "./DonutGraphStyles.scss";
 function DonutGraph({ charDate, option,colorDounut}) {
   const [userData1, setUserDate] = useState(charDate);
@@ -10,7 +10,6 @@ function DonutGraph({ charDate, option,colorDounut}) {
     (partialSum, a) => partialSum + a,
     0
   );  
-  console.log(colorDounut)
   const prosent = userData1.datasets[0].data.map((item) => (item * 100) / sum);
   const prosent1 = prosent.map((item) => item.toFixed(0));
   const [isActive, setIsActive] = useState(true);
@@ -143,7 +142,7 @@ function DonutGraph({ charDate, option,colorDounut}) {
       </div>
       <div className="content-graph-doughnut">
         <ul>
-          {dateCategoris.map((item, index) => (
+          {dateCategoris.categoris.map((item, index) => (
             <li>
               <span className="desh" style={{ background: item.color }}></span>{" "}
               <span className="content-procent">{prosent1[index++]} %</span>{" "}
